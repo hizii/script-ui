@@ -16,8 +16,19 @@
 	};
 	win.StickyComponent.prototype = {
 		init : function () {
+			this.initLayout();
 			this.bindEvents(true);
 			this.onScrollFunc();
+		},
+		initLayout : function () {
+			var stickyWrapClass = this.obj.attr('class').split(' ')[0],
+			jsStickyWrapClass = 'js-' + stickyWrapClass;
+
+			if (!this.obj.parent().hasClass(jsStickyWrapClass)) {
+					this.obj.wrap('<div class="' + jsStickyWrapClass + '" />');
+			}
+			this.jsStickyWrap = this.obj.parent();
+			this.jsStickyWrap.css('height', Math.ceil(this.obj.outerHeight(), 10));
 		},
 		changeEvents : function (event) {
 			var events = [],
