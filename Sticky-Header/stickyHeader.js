@@ -81,8 +81,8 @@
 		},
 		setSectionOffset : function () {
 			var _self = this;
-			this.sectionItem.each(function() {
-				_self.sectionOffset.push($(this).offset().top - _self.opts.topBuffer)
+			this.sectionItem.each(function(index) {
+				_self.sectionOffset[index] = $(this).offset().top - _self.opts.topBuffer;
 			});
 		},
 		changeEvents : function (event) {
