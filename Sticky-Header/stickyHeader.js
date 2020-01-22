@@ -22,10 +22,10 @@
 		},
 		initLayout : function () {
 			var stickyWrapClass = this.obj.attr('class').split(' ')[0],
-			jsStickyWrapClass = 'js-' + stickyWrapClass;
+					jsStickyWrapClass = 'js-' + stickyWrapClass;
 
 			if (!this.obj.parent().hasClass(jsStickyWrapClass)) {
-					this.obj.wrap('<div class="' + jsStickyWrapClass + '" />');
+				this.obj.wrap('<div class="' + jsStickyWrapClass + '" />');
 			}
 			this.jsStickyWrap = this.obj.parent();
 			this.jsStickyWrap.css('height', Math.ceil(this.obj.outerHeight(), 10));
