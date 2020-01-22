@@ -17,10 +17,10 @@
   
 플러그인 생성
   - Constructor : `TabComponent`
-  - 플러그인명 : tabPlugin
-  <br>
+  - 플러그인명 : 'tabPlugin'
+ 
 ```javascript
-var	pluginName = 'tabPlugin',
+var pluginName = 'tabPlugin',
     pluginInstances = [];
 
 $.fn[pluginName] = function (args) {
