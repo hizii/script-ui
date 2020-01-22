@@ -16,51 +16,51 @@
   - 메뉴 활성 클래스 : activeClass
   
 플러그인 생성
-- Constructor : `TabComponent`
-- 플러그인 명 : 'tabPlugin'
-```javascript
-var	pluginName = 'tabPlugin',
-    pluginInstances = [];
+  - Constructor : `TabComponent`
+  - 플러그인명 : 'tabPlugin'
+  ```javascript
+  var	pluginName = 'tabPlugin',
+      pluginInstances = [];
 
-$.fn[pluginName] = function (args) {
-  var _this = this;
-  for (var i = 0, max = this.length; i < max; i++) {
-    pluginInstances[i] = new TabComponent(_this.eq(i), args);
-  }
-};
-```
+  $.fn[pluginName] = function (args) {
+    var _this = this;
+    for (var i = 0, max = this.length; i < max; i++) {
+      pluginInstances[i] = new TabComponent(_this.eq(i), args);
+    }
+  };
+  ```
 
 플러그인 사용
-```javascript
-// 1. 기본
-$(selector)['tabPlugin']();
+  ```javascript
+  // 1. 기본
+  $(selector)['tabPlugin']();
 
-// tab_area 클래스를 가진 요소들에 플러그인 적용
-$('.tab_area')['tabPlugin']();
+  // tab_area 클래스를 가진 요소들에 플러그인 적용
+  $('.tab_area')['tabPlugin']();
 
-// 2. 플러그인 기본 옵션 변경 : 전체 플러그인에 적용
-$('.tab_area')[pluginName]({
-  activeClass: 'on'
-});
+  // 2. 플러그인 기본 옵션 변경 : 전체 플러그인에 적용
+  $('.tab_area')[pluginName]({
+    activeClass: 'on'
+  });
 
-// 3. 각 인스턴스 별 옵션 지정
-// 원래 옵션 객체랑 새 옵션 객체 병합 후 재호출
-function overwriteOption (options, ...elements) {
-  for (var i = 0, max = elements.length; i < max; i++) {
-    Object.assign(elements[i].opts, options);
-    elements[i].init();
+  // 3. 각 인스턴스 별 옵션 지정
+  // 원래 옵션 객체랑 새 옵션 객체 병합 후 재호출
+  function overwriteOption (options, ...elements) {
+    for (var i = 0, max = elements.length; i < max; i++) {
+      Object.assign(elements[i].opts, options);
+      elements[i].init();
+    }
   }
-}
-overwriteOption({
-  tabWrap: '.tab2',
-  panelItem: '.tab_box2'
-}, pluginInstances[1]);
+  overwriteOption({
+    tabWrap: '.tab2',
+    panelItem: '.tab_box2'
+  }, pluginInstances[1]);
 
-overwriteOption({
-  tabWrap: '.tab3',
-  panelItem: '.tab_box3'
-}, pluginInstances[2], pluginInstances[3]);
-```
+  overwriteOption({
+    tabWrap: '.tab3',
+    panelItem: '.tab_box3'
+  }, pluginInstances[2], pluginInstances[3]);
+  ```
 
 ## Methods & Process
 ### 1. `TabComponent.bindEvents(true)`
