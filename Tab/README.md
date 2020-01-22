@@ -17,18 +17,19 @@
   
 플러그인 생성
   - Constructor : `TabComponent`
-  - 플러그인명 : 'tabPlugin'
-  ```javascript
-  var	pluginName = 'tabPlugin',
-      pluginInstances = [];
+  - 플러그인명 : tabPlugin
+  <br>
+```javascript
+var	pluginName = 'tabPlugin',
+    pluginInstances = [];
 
-  $.fn[pluginName] = function (args) {
-    var _this = this;
-    for (var i = 0, max = this.length; i < max; i++) {
-      pluginInstances[i] = new TabComponent(_this.eq(i), args);
-    }
-  };
-  ```
+$.fn[pluginName] = function (args) {
+  var _this = this;
+  for (var i = 0, max = this.length; i < max; i++) {
+    pluginInstances[i] = new TabComponent(_this.eq(i), args);
+  }
+};
+```
 
 플러그인 사용
   ```javascript
