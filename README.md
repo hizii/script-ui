@@ -8,8 +8,8 @@
 - [Guide](https://hizii.github.io/script-ui/Tab/) 
 
 ## Accordion
-- [Preview]()
-- [Guide]() 
+- [Preview](https://hizii.github.io/script-ui/Accordion/accordion.html)
+- [Guide](https://hizii.github.io/script-ui/Accordion/)
 
 ## Top Button
 - [Preview]() 
