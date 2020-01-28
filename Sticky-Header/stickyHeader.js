@@ -69,6 +69,7 @@
 			this.setElements();
 			this.bindEvents(true);
 			this.setSectionOffset();
+			this.scrollEndFunc();
 		},
 		setElements : function () {
 			this.tabList = this.obj.find(this.opts.tabWrap);
