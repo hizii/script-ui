@@ -12,5 +12,5 @@
 - [Guide](https://hizii.github.io/script-ui/Accordion/)
 
 ## Top Button
-- [Preview]() 
-- [Guide]() 
+- [Preview](https://hizii.github.io/script-ui/Top-Button/topButton.html) 
+- [Guide](https://hizii.github.io/script-ui/Top-Button/)
