@@ -14,3 +14,7 @@
 ## Top Button
 - [Preview](https://hizii.github.io/script-ui/Top-Button/topButton.html) 
 - [Guide](https://hizii.github.io/script-ui/Top-Button/)
+
+## Array
+- [Preview](https://hizii.github.io/script-ui/array/array.html) 
+- [Guide](https://hizii.github.io/script-ui/array/)
