@@ -5,6 +5,7 @@ class UIDev {
         this.sayMembers(this.getFoods(), 2);
         this.sayMembers(this.drawLots(), 3);
         this.sayMembers(this.returnHome(), 4);
+        this.sayMembers(this.stragglers, 4);
     }
 
     /** 
@@ -60,13 +61,14 @@ class UIDev {
             winners[i] = stragglers.splice(luckyNumber, 1)[0];
         }
         this.winners = winners;
+        this.stragglers = stragglers;
 
         return winners;
     }
 
     returnHome() {
         let survivor = this.members.concat(this.winners);
-        
+
         return survivor;
     }
 }
