@@ -22,15 +22,12 @@ class UIDev {
     }
 
     hello2020() {
-        const cutMembers = ['최은혜', '문채민', '윤홍미'];
-        let newMembers = this.members.slice();
+        const uiDev2 = ['최은혜', '문채민', '윤홍미'];
 
-        for (let i = 0; i < cutMembers.length; i++) {
-            newMembers.splice(this.members.indexOf(cutMembers[i]) - i, 1);
-        }
-        this.members = newMembers;
+        this.members = this.members.filter(member => uiDev2.indexOf(member) < 0);
+        // this.members = this.members.filter(member => !uiDev2.includes(member));
 
-        return newMembers;
+        return this.members;
     }
 
     getFoods() {
@@ -54,10 +51,10 @@ class UIDev {
         let winners = [],
             stragglers = this.finders.slice(),
             luckyNumber,
-            max = this.finders.length - 1;
+            max = 2;
 
-        for (let i = 0; winners.length < 2; i++) {
-            luckyNumber = Math.floor(Math.random() * (max + 1 - i));
+        for (let i = 0; winners.length < max; i++) {
+            luckyNumber = Math.floor(Math.random() * (this.finders.length - i));
             winners[i] = stragglers.splice(luckyNumber, 1)[0];
         }
         this.winners = winners;
